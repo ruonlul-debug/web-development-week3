@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple, clear budget tracker for keeping everyday spending in view.">
+    <title>PocketPlan | Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="PocketPlan home">
+        <span class="brand-mark" aria-hidden="true">$</span>
+        <span>PocketPlan</span>
+      </a>
+      <span class="header-note">A little more clarity, every day.</span>
+    </header>
+
+    <main id="home">
+      <section class="welcome" aria-labelledby="page-title">
+        <div class="welcome-copy">
+          <p class="eyebrow">YOUR MONEY, IN PERSPECTIVE</p>
+          <h1 id="page-title">
+            Make room for <span>what matters.</span>
+          </h1>
+          <p class="welcome-description">
+            Keep an eye on everyday spending and build better money habits, one entry at a time.
+          </p>
+        </div>
+        <img
+          class="welcome-art"
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 112 112'%3E%3Crect width='112' height='112' rx='32' fill='%23dff4e9'/%3E%3Cpath d='M28 42c0-5 4-9 9-9h39v48H37c-5 0-9-4-9-9V42Z' fill='%231c7657'/%3E%3Cpath d='M76 43h10v29H76c-7 0-12-6-12-14s5-15 12-15Z' fill='%232da779'/%3E%3Ccircle cx='77' cy='57' r='3' fill='white'/%3E%3Cpath d='M44 47h17M44 56h10' stroke='%23bdebd4' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+          alt="Illustration of a green wallet"
+          width="112"
+        >
+      </section>
+
+      <section class="overview" aria-label="Spending overview">
+        <article class="overview-card">
+          <span class="card-label">MONTHLY BUDGET</span>
+          <strong>$2,500.00</strong>
+          <span class="card-footnote">Your planned spending</span>
+        </article>
+        <article class="overview-card overview-card-accent">
+          <span class="card-label">TOTAL SPENT</span>
+          <strong>$1,274.50</strong>
+          <span class="card-footnote">Across 5 expenses</span>
+        </article>
+        <article class="overview-card">
+          <span class="card-label">LEFT TO SPEND</span>
+          <strong>$1,225.50</strong>
+          <span class="card-footnote">You’re right on track</span>
+        </article>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel add-expense-section" aria-labelledby="add-expense-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">NEW ENTRY</p>
+              <h2 id="add-expense-title">Add an expense</h2>
+            </div>
+            <span class="heading-icon" aria-hidden="true">+</span>
+          </div>
+          <p class="section-description">Note it now, stay in control later.</p>
+
+          <form class="expense-form">
+            <div class="form-field">
+              <label for="expense-name">Expense name</label>
+              <input
+                id="expense-name"
+                name="expense-name"
+                type="text"
+                placeholder="e.g. Weekly groceries"
+              >
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="expense-amount">Amount</label>
+                <div class="amount-input">
+                  <span aria-hidden="true">$</span>
+                  <input
+                    id="expense-amount"
+                    name="expense-amount"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    placeholder="0.00"
+                  >
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="expense-category">Category</label>
+                <select id="expense-category" name="expense-category">
+                  <option value="">Choose one</option>
+                  <option value="food">Food</option>
+                  <option value="transport">Transport</option>
+                  <option value="rent">Rent</option>
+                  <option value="entertainment">Entertainment</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="expense-date">Date</label>
+              <input id="expense-date" name="expense-date" type="date">
+            </div>
+            <button class="add-button" type="button">Add Expense <span aria-hidden="true">→</span></button>
+          </form>
+          <p class="form-note">Your entries stay yours. This is a simple local tracker.</p>
+        </section>
+
+        <section class="panel expenses-section" aria-labelledby="expenses-title">
+          <div class="section-heading expenses-heading">
+            <div>
+              <p class="eyebrow">RECENT ACTIVITY</p>
+              <h2 id="expenses-title">Your expenses</h2>
+            </div>
+            <span class="entry-count">5 entries</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="expense-name">Weekly groceries</span></td>
+                  <td class="amount">$86.40</td>
+                  <td><span class="category-pill food">Food</span></td>
+                  <td>Oct 18, 2026</td>
+                </tr>
+                <tr>
+                  <td><span class="expense-name">Monthly rent</span></td>
+                  <td class="amount">$850.00</td>
+                  <td><span class="category-pill rent">Rent</span></td>
+                  <td>Oct 15, 2026</td>
+                </tr>
+                <tr>
+                  <td><span class="expense-name">Metro pass</span></td>
+                  <td class="amount">$45.00</td>
+                  <td><span class="category-pill transport">Transport</span></td>
+                  <td>Oct 12, 2026</td>
+                </tr>
+                <tr>
+                  <td><span class="expense-name">Movie night</span></td>
+                  <td class="amount">$32.10</td>
+                  <td><span class="category-pill entertainment">Entertainment</span></td>
+                  <td>Oct 10, 2026</td>
+                </tr>
+                <tr>
+                  <td><span class="expense-name">Coffee with Sam</span></td>
+                  <td class="amount">$12.00</td>
+                  <td><span class="category-pill food">Food</span></td>
+                  <td>Oct 08, 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="help-details">
+            <summary>How to use this tracker</summary>
+            <p>Enter an expense name, amount, category, and date in the form. Select “Add Expense” to practice the form layout. Adding entries will be enabled when this tracker gets its JavaScript upgrade.</p>
+          </details>
+        </section>
+      </div>
+
+      <section class="learning-panel" aria-labelledby="learning-title">
+        <div class="learning-copy">
+          <p class="eyebrow">A GOOD PLACE TO START</p>
+          <h2 id="learning-title">A budget that works for you</h2>
+          <p>Pick up a few practical ideas for planning your spending and making your money go further.</p>
+        </div>
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/HQzoZfc3GwQ"
+            title="Budgeting tips video"
+            width="560"
+            height="315"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark" aria-hidden="true">$</span>
+        <span>PocketPlan</span>
+      </a>
+      <p>Small steps add up. Keep going.</p>
+    </footer>
+  </body>
+</html>
